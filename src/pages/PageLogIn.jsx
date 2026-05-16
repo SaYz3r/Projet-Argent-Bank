@@ -46,7 +46,7 @@ function PageLogin() {
             )
 
             // 5. Redirige vers le profil
-            navigate('/user')
+            navigate('/profile')
         } catch {
             setError('Une erreur est survenue, réessayez')
         }

@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout } from '../store/authSlice'
 import { clearUser } from '../store/userSlice'
@@ -8,10 +8,14 @@ function Header() {
     const { isLoggedIn } = useSelector((state) => state.auth)
     const { firstName } = useSelector((state) => state.user)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     function handleLogout() {
-        dispatch(logout())
-        dispatch(clearUser())
+        navigate('/')
+        setTimeout(() => {
+            dispatch(logout())
+            dispatch(clearUser())
+        }, 100)
     }
 
     return (
@@ -27,7 +31,7 @@ function Header() {
             <div>
                 {isLoggedIn ? (
                     <>
-                        <NavLink className="main-nav-item" to="/user">
+                        <NavLink className="main-nav-item" to="/profile">
                             <i className="fa fa-user-circle"></i>
                             {firstName}
                         </NavLink>
