@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import AccountContainer from '../components/AccountContainer'
 import EditNameForm from '../components/EditNameForm'
+import { useSelector } from 'react-redux'
 
 function PageUser() {
     const [isEditing, setIsEditing] = useState(false)
+    const { firstName, lastName } = useSelector((state) => state.user)
 
     return (
         <main className="main bg-dark">
@@ -13,7 +15,7 @@ function PageUser() {
                     {!isEditing && (
                         <>
                             <br />
-                            Tony Jarvis!
+                            {firstName} {lastName}!
                         </>
                     )}
                 </h1>
