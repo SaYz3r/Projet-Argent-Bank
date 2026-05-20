@@ -6,7 +6,6 @@ import Input from './Input'
 
 function EditNameForm({ isEditing, setIsEditing }) {
     const { token } = useSelector((state) => state.auth)
-    const { email } = useSelector((state) => state.user)
     const dispatch = useDispatch()
 
     const [firstName, setFirstName] = useState('')
@@ -35,7 +34,6 @@ function EditNameForm({ isEditing, setIsEditing }) {
                 setUser({
                     firstName: data.body.firstName,
                     lastName: data.body.lastName,
-                    email,
                 })
             )
 

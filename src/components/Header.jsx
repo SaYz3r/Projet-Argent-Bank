@@ -5,7 +5,7 @@ import { clearUser } from '../store/userSlice'
 import Logo from '../assets/argentBankLogo.png'
 
 function Header() {
-    const { isLoggedIn } = useSelector((state) => state.auth)
+    const { token } = useSelector((state) => state.auth)
     const { firstName } = useSelector((state) => state.user)
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -29,7 +29,7 @@ function Header() {
                 <h1 className="sr-only">Argent Bank</h1>
             </NavLink>
             <div>
-                {isLoggedIn ? (
+                {token ? (
                     <>
                         <NavLink className="main-nav-item" to="/profile">
                             <i className="fa fa-user-circle"></i>

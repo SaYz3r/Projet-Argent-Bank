@@ -14,6 +14,7 @@ function App() {
             <Routes>
                 <Route path="" element={<PageHome />} />
                 <Route path="/logIn" element={<PageLogin />} />
+                <Route path="*" element={<PageHome />} />
                 <Route element={<PrivateRoute />}>
                     <Route path="/profile" element={<PageUser />} />
                 </Route>
