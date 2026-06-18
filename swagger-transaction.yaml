@@ -119,6 +119,9 @@ definitions:
             id:
                 type: string
                 description: Transaction ID
+            accountId:
+                type: string
+                description: Account ID the transaction belongs to
             date:
                 type: string
                 description: Transaction date
@@ -138,6 +141,9 @@ definitions:
             id:
                 type: string
                 description: Transaction ID
+            accountId:
+                type: string
+                description: Account ID the transaction belongs to
             date:
                 type: string
                 description: Transaction date
