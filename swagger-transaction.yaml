@@ -102,7 +102,7 @@ paths:
                 '200':
                     description: Note added successfully
                     schema:
-                        $ref: '#/definitions/TransactionDetailResponse'
+                        $ref: '#/definitions/TransactionUpdatePayload'
                 '400':
                     description: Invalid Fields
                 '401':
