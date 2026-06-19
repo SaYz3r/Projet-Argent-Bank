@@ -95,7 +95,7 @@ paths:
                   description: Note payload
                   required: true
                   schema:
-                      $ref: '#/definitions/NotePayload'
+                      $ref: '#/definitions/TransactionUpdatePayload'
             produces:
                 - application/json
             responses:
